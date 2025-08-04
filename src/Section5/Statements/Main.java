@@ -11,7 +11,6 @@ public class Main {
 
         System.out.println("This is " + "another " + "still more ");
 
-        int anotherVar = 50;
         myVar++;
         System.out.println("Var = " + myVar);
 
