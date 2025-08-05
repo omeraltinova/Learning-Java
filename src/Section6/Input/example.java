@@ -1,3 +1,5 @@
+package Section6.Input;
+
 import java.util.Scanner;
 
 public class example {

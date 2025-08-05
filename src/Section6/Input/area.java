@@ -1,3 +1,5 @@
+package Section6.Input;
+
 public class area {
 
     
