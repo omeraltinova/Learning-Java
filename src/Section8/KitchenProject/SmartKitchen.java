@@ -42,7 +42,7 @@ class Coffeemaker {
     }
     public void brewCoffee(){
         if(hasWorkToDo){
-            System.out.println("Brewing cafee");
+            System.out.println("Brewing coffee");
             hasWorkToDo=false;
         }
     }

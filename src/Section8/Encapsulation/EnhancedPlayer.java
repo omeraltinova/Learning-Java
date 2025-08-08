@@ -1,20 +1,20 @@
 package Section8.Encapsulation;
 
 public class EnhancedPlayer {
-    private String FullName;
+    private String fullName;
     private int healthPercentage;
     private String weapon;
 
-    public EnhancedPlayer(String FullName) {
-        this(FullName,100,"Sword");
+    public EnhancedPlayer(String fullName) {
+        this(fullName,100,"Sword");
     }
 
-    public EnhancedPlayer(String FullName, int health, String weapon) {
-        this.FullName = FullName;
+    public EnhancedPlayer(String fullName, int health, String weapon) {
+        this.fullName = fullName;
         if(health<=0){
             this.healthPercentage =1;
         }else if(health>100){
-            health=100;
+            this.healthPercentage=100;
         }else this.healthPercentage =health;
         this.weapon = weapon;
     }
