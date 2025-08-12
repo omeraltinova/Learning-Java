@@ -1,6 +1,6 @@
-# Section 8: Composition ve Encapsulation
+# Section 8: Composition, Encapsulation ve Polymorphism
 
-Bu bölümde OOP'nin önemli kavramlarından olan Composition ve Encapsulation konuları öğrenildi.
+Bu bölümde OOP'nin önemli kavramlarından olan Composition, Encapsulation ve Polymorphism konuları öğrenildi.
 
 ## Öğrenilen Konular
 
@@ -54,6 +54,32 @@ Bu bölümde OOP'nin önemli kavramlarından olan Composition ve Encapsulation k
 - makeBed() ve turnOn() davranışları
 - Composition chain: Bedroom -> Lamp -> turnOn()
 
+#### Polymorphism Examples
+
+##### Movie Project
+- **Movie**: Base sınıf
+- **Alt sınıflar**:
+  - Adventure (Macera filmi)
+  - Comedy (Komedi filmi)
+  - ScienceFiction (Bilim kurgu filmi)
+- **Factory Method**: getMovie() ile tip bazlı nesne yaratma
+- **Method Overriding**: Her film tipi kendine özel watchMovie() davranışı
+- **Runtime Polymorphism**: Aynı referans farklı davranışlar
+
+##### Car Project (Polymorphism)
+- **Car**: Base sınıf
+- **Alt sınıflar**:
+  - GasPoweredCar (Benzinli araç)
+  - ElectricCar (Elektrikli araç) 
+  - HybridCar (Hibrit araç)
+- **Method Overriding**: 
+  - startEngine(): Her araç tipi farklı başlatma
+  - runEngine(): Her araç tipi farklı çalışma davranışı
+- **Hibrit Araç Özellikleri**:
+  - Hem batarya hem de silindir bilgisi
+  - "Hybrid -> X kWh battery + Y cylinders are starting up!"
+  - "Hybrid -> switch X kWh battery + Y km/L usage"
+
 #### Encapsulation Examples
 - **Player vs EnhancedPlayer**: 
   - Player: Public fields (kötü pratik)
@@ -79,20 +105,43 @@ Bu bölümde OOP'nin önemli kavramlarından olan Composition ve Encapsulation k
 4. **Debugging**: Tek erişim noktası
 5. **Invariant Korunması**: Nesne her zaman geçerli durumda
 
-## Best Practices
+## Polymorphism Avantajları
 
-### Composition için:
+1. **Esneklik**: Aynı kod farklı tiplerle çalışabilir
+2. **Genişletilebilirlik**: Yeni tipler kolayca eklenebilir
+3. **Maintenance**: Tek yerden kontrol
+4. **Code Reusability**: Ortak davranışlar base class'ta
+5. **Runtime Decision**: Çalışma anında karar verme
+
+## OOP Prensiplerinin Birlikte Kullanımı
+
+### Inheritance + Encapsulation + Polymorphism
+- **Inheritance**: Code reuse ve hierarşi
+- **Encapsulation**: Data protection ve validation
+- **Polymorphism**: Flexible behavior
+- **Composition**: Alternative to inheritance
+
+### Best Practices
+
+#### Composition için:
 - Her bileşen tek bir sorumluluğa sahip olmalı (Single Responsibility)
 - Ana sınıf bileşenleri koordine etmeli
 - Null kontrolü yapılmalı
 - Builder pattern complex nesneler için düşünülmeli
 
-### Encapsulation için:
+#### Encapsulation için:
 - Tüm field'lar private olmalı
 - Getter/Setter'larda validation yapılmalı
 - Immutable nesneler tercih edilmeli
 - Method isimleri anlamlı olmalı
 - Internal state dışarı sızdırılmamalı
+
+### Polymorphism için:
+- Method overriding dikkatli yapılmalı
+- Base class metodları protected olabilir
+- Factory pattern complex object creation için
+- instanceof kullanımından kaçınılmalı
+- Switch expressions modern yaklaşım
 
 ## Düzeltilen Hatalar
 1. **EnhancedPlayer.java**: 
